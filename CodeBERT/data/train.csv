@@ -1,0 +1,8 @@
+source_code,target_code
+"System.out.println(""hello"");","print(""hello"")"
+int x = 10;,x = 10
+if (x > 5) { return true; },if x > 5: return True
+for (int i=0; i<10; i++) { },for i in range(10): pass
+"public int add(int a, int b) { return a+b; }","def add(a, b): return a+b"
+"String name = ""John"";","name = ""John"""
+boolean flag = true;,flag = True
