@@ -1,0 +1,54 @@
+Python编程知识库
+
+一、基础语法
+1. 变量和数据类型
+   - 数字类型: int, float, complex
+   - 字符串: str, 支持切片操作
+   - 布尔型: bool, True/False
+   - 列表: list, 可变序列
+   - 元组: tuple, 不可变序列
+   - 字典: dict, 键值对集合
+   - 集合: set, 无序不重复元素
+
+2. 控制结构
+   - 条件语句: if, elif, else
+   - 循环语句: for, while
+   - 循环控制: break, continue, pass
+
+3. 函数定义
+   - def 函数名(参数):
+   - 支持默认参数、可变参数、关键字参数
+   - lambda 匿名函数
+
+二、面向对象编程
+1. 类和对象
+   - class 类名:
+   - 构造函数: __init__
+   - 实例方法、类方法、静态方法
+
+2. 继承和多态
+   - 单继承、多继承
+   - 方法重写
+   - 鸭子类型
+
+三、常用模块
+1. 标准库
+   - os: 操作系统接口
+   - sys: 系统相关参数和函数
+   - datetime: 日期时间处理
+   - json: JSON编码解码
+   - re: 正则表达式
+
+2. 第三方库
+   - numpy: 数值计算
+   - pandas: 数据分析
+   - requests: HTTP请求
+   - matplotlib: 数据可视化
+
+四、异常处理
+try:
+    # 可能出错的代码
+except ExceptionType:
+    # 异常处理
+finally:
+    # 清理代码

@@ -1,0 +1,44 @@
+{
+    "mcpServers": {
+        
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "."
+            ]
+        },
+        
+        "research": {
+            "command": "uv",
+            "args": ["run", "MCP.py"]
+        },
+        
+        "fetch": {
+            "command": "uvx",
+            "args": ["mcp-server-fetch"]
+        },
+        
+        "git": {
+        "command": "uvx",
+        "args": ["mcp-server-git", "git@github.com:zhuningcheng/DeepLearning.git"],
+        "env": {
+        "GITHUB_TOKEN": "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"
+       }
+      },
+        "mcp-git-ingest": {
+            "command": "uvx",
+            "args": ["--from", "git+https://github.com/adhikasp/mcp-git-ingest", "mcp-git-ingest"]
+        },
+        "opgg-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "supergateway",
+        "--streamableHttp",
+        "https://mcp-api.op.gg/mcp"
+      ]
+    }
+    }
+}

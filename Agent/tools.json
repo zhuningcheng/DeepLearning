@@ -1,0 +1,98 @@
+{
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "get_current_time",
+        "description": "获取当前时间",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "timezone_str": {
+              "type": "string",
+              "description": "时区，例如：UTC+8"
+            },
+            "format": {
+              "type": "string",
+              "enum": ["standard", "simple", "timestamp"],
+              "description": "时间格式",
+              "default": "standard"
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "derivative_calculator",
+        "description": "计算数学表达式的导数，支持普通导数、高阶导数和在特定点求值",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "expression": {
+              "type": "string",
+              "description": "要求导的数学表达式，例如：x^2 + sin(x) + 2*x，支持 +, -, *, /, ^, sin, cos, tan, exp, log, sqrt 等运算符和函数"
+            },
+            "variable": {
+              "type": "string",
+              "description": "求导变量，默认为 x",
+              "default": "x"
+            },
+            "evaluate_at": {
+              "type": "number",
+              "description": "在特定数值点计算导数值，如果不需要求值则省略此参数"
+            },
+            "nth_derivative": {
+              "type": "integer",
+              "description": "导数的阶数，例如 1 表示一阶导数，2 表示二阶导数",
+              "default": 1,
+              "minimum": 1,
+              "maximum": 10
+            }
+          },
+          "required": ["expression"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "partial_derivative",
+        "description": "计算多变量函数的偏导数",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "expression": {
+              "type": "string",
+              "description": "要求导的多变量数学表达式，例如：x^2 * y + sin(x*y)"
+            },
+            "variables": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "变量列表，例如：[\"x\", \"y\"]"
+            },
+            "evaluate_at": {
+              "type": "object",
+              "description": "在特定点求值，例如：{\"x\": 1, \"y\": 2}",
+              "additionalProperties": {
+                "type": "number"
+              }
+            },
+            "order": {
+              "type": "integer",
+              "description": "偏导数的阶数",
+              "default": 1,
+              "minimum": 1,
+              "maximum": 5
+            }
+          },
+          "required": ["expression", "variables"]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+source_code,target_code
+List<String> list = new ArrayList<>();,list = []
+"list.add(""item"");","list.append(""item"")"
